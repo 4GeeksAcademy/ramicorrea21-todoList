@@ -1,14 +1,19 @@
-import React, { useState } from "react";
-
+import React from "react";
+import "../../styles/index.css"
 //create your first component
 const Home = () => {
-	// const [tasks, setTasks] = useState("")
-	// {console.log(tasks);}
 	return (
 		<>
-			{/* <input type="text" onChange={e => setTasks(e.target.value)} value={tasks} />
+		<h1>Todo List</h1>
+		<div className="container d-flex justify-content-center">
 			<ul>
-			</ul> */}
+				<li className="border"><input type="text" /></li>
+				<li className="border"></li>
+				<li className="border"></li>
+				<li className="border"></li>
+				<li className="border"></li>
+			</ul>
+		</div>	
 		</>
 	);
 };
