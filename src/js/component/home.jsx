@@ -33,14 +33,16 @@ const Home = () => {
 								onKeyDown={addList} />
 						</form>
 					</li>
-					{list.map((t, index) => {
-						return (<li className=" border rounded px-1 py-1" key={index}>{t.title}
+
+					{list.length != 0 ? list.map((t, index) => {
+						return (<li className=" border rounded  d-flex justify-content-between" key={index}>
+							<p className="py-0 my-0">{t.title}</p>
 							<button type="button" className="btn-close close" aria-label="Close"
 								onClick={() => setList(list.filter(
 									(t, i) => index != i
 								))}>
 							</button></li>)
-					})}
+					}) : <li className="border rounded px-1 py-1">No tasks to be done, add one.</li>}
 					<li> {list.length} Tasks Left</li>
 				</ul>
 			</div>
